@@ -1,0 +1,36 @@
+/*Footer Styles*/
+
+.app-footer {
+  padding: 0 24px;
+  position: relative;
+
+  @include box-shadow(0 -1px 4px 0 rgba(0, 0, 0, 0.15));
+  background-color: $body-bg;
+  color: $secondary;
+  line-height: $footer-height;
+  min-height: $footer-height;
+  height: $footer-height + 12px;
+  max-height: $footer-height + 12px;
+  border-top: 8px solid $app-primary !important;
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: 0;
+    border-top: solid 2px $secondary !important;
+  }
+
+  & a {
+    color: $sidebar-text-color;
+    &:hover {
+      color: $sidebar-hover-color;
+    }
+  }
+
+  @media screen and (max-width: 400px){
+    font-size: 12px;
+    padding: 0 20px;
+  }
+}
